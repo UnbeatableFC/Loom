@@ -8,7 +8,7 @@ const FaqItem = ({ question, answer }) => {
           className="w-full p-4 flex justify-between items-center bg-gray-100 hover:bg-gray-200 cursor-pointer "
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="font-semibold text-left">{question}</span>
+          <span className="font-semibold text-sm text-left">{question}</span>
           <span className="w-8 h-8 flex items-center justify-center font-semibold rounded-full bg-blue-400 text-white text-lg transition-transform duration-300">
             {isOpen ? "-" : "+"}
           </span>
@@ -20,7 +20,7 @@ const FaqItem = ({ question, answer }) => {
               : "grid-rows-[0fr] opacity-0 p-0"
           }`}
         >
-          <div className="overflow-hidden">{answer}</div>
+          <div className="overflow-hidden text-sm">{answer}</div>
         </div>
       </div>
     </div>

@@ -1,12 +1,10 @@
 const Logos = ({ logo, title }) => {
   return (
-    <div className="flex p-3 items-center justify-center">
+    <div className={`flex items-center justify-center px-4 py-2`}>
       <img
-        className="object-contain w-2xl h-16 md:w-28 md:h-20 lg:w-32 lg:h-24"
-        width={300}
-        height={200}
         src={logo}
         alt={title}
+        className="h-12 w-20 object-contain " // Fixed width and height
       />
     </div>
   );

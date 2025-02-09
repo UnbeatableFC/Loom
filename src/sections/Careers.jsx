@@ -2,7 +2,7 @@ import ActionButton from "../shared/ActionButton"
 
 const Careers = () => {
   return (
-    <section id="careers" className="flex gap-10 justify-center items-center mx-48">
+    <section id="career" className="flex flex-col-reverse md:flex-row lg:gap-10 justify-center items-center mx-10 lg:mx-48">
         <div className="flex flex-1">
             <img src="" alt="robot" />
         </div>

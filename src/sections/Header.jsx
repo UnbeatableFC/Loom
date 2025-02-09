@@ -27,7 +27,9 @@ const Header = ({ selectedPage, setSelectedPage }) => {
       <div
         className={` ${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full px-2 `}
       >
-        <div className={`${flexBetween} mx-auto w-full md:px-48`}>
+        <div
+          className={`${flexBetween} mx-auto w-full px-10 lg:px-48`}
+        >
           <div className={`${flexBetween} w-full gap-16`}>
             <div className="flex w-22 md:w-28 items-center gap-4">
               <img
@@ -100,7 +102,7 @@ const Header = ({ selectedPage, setSelectedPage }) => {
 
       {/* MOBILE */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[250px] bg-blue-300 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[150px] md:w-[250px] bg-blue-300 drop-shadow-xl">
           <div className="flex justify-end p-12">
             <button
               title="Close-Icon"
@@ -116,34 +118,39 @@ const Header = ({ selectedPage, setSelectedPage }) => {
           </div>
 
           <div>
-            <div className={`${flexBetween} flex-col gap-10 text-xl`}>
+            <div onClick={() => setIsMenuToggled(!isMenuToggled)} className={`${flexBetween} flex-col gap-10 text-xl`}>
               <Link
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
 
               <Link
                 page="About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
 
               <Link
                 page="Services"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
 
               <Link
                 page="Career"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
               <Link
                 page="Contact Us"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
             </div>
           </div>

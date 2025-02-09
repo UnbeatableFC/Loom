@@ -1,6 +1,6 @@
 const ServiceCard = ({ icon, title, description, color }) => {
   return (
-    <div className="flex justify-center items-center gap-5 py-4 bg-white rounded-xl">
+    <div className="flex justify-center items-center gap-5 py-2 px-2 lg:px-0 lg:py-4 bg-white rounded-xl">
       <div className="flex justify-center items-center">
         <div className={`${color} p-4 rounded-full`}>
           <img width={35} height={40} src={icon} alt={title} />
