@@ -11,7 +11,7 @@ const Hero = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="gap-16 justify-center items-center my-10 py-10 md:h-full md:pb-0"
+      className="gap-16 justify-center items-center mt-10 py-10 md:py-10 md:h-full md:pb-0"
     >
       {/* IMAGE AND HEADER */}
       <motion.div
@@ -25,15 +25,15 @@ const Hero = ({ setSelectedPage }) => {
             initial={{ opacity: 0 }} // Start fully transparent
             animate={{ opacity: 1 }} // Fade to fully visible
             exit={{ opacity: 0 }} // Fade out when unmounting
-            transition={{ duration: 3 }} // Smooth transition
+            transition={{ duration: 4 }} // Smooth transition
             className=""
           >
             <div className="flex flex-col gap-4 justify-center items-center md:items-start">
               <div className="flex flex-col gap-3">
-                <h2 className="text-3xl text-center lg:text-start md:text-4xl font-bold">
+                <h2 className="text-7xl text-center lg:text-start lg:text-5xl md:text-4xl font-bold">
                   Leverage AI to Build
                 </h2>
-                <h2 className="text-3xl text-center lg:text-start text-[#20A5E6] md:text-4xl font-bold">
+                <h2 className="text-5xl  text-center lg:text-start text-[#20A5E6] md:text-4xl font-bold">
                   Smart Solutions
                 </h2>
               </div>
@@ -66,16 +66,20 @@ const Hero = ({ setSelectedPage }) => {
               View Services
             </button>
           </motion.div>
-          <div className="flex gap-8">
+          <div className="flex items-center justify-center md:justify-start md:items-start gap-8">
             <motion.div
               initial={{ opacity: 0 }} // Start fully transparent
               animate={{ opacity: 1 }} // Fade to fully visible
               exit={{ opacity: 0 }} // Fade out when unmounting
               transition={{ duration: 3 }} // Smooth transition
-              className="flex flex-col"
+              className="flex items-center md:items-start flex-col"
             >
-              <p className="font-semibold text-[25px] md:text-[28px]">200+</p>
-              <p className="text-[11px] md:text-[14px] md:-mt-2">Projects Done</p>
+              <p className="font-semibold text-[25px] md:text-[28px]">
+                200+
+              </p>
+              <p className="text-[11px] md:text-[14px] md:-mt-2">
+                Projects Done
+              </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }} // Start fully transparent
@@ -84,8 +88,12 @@ const Hero = ({ setSelectedPage }) => {
               transition={{ duration: 3, delay: 0.7 }} // Smooth transition
               className=""
             >
-              <p className="font-semibold text-[25px] md:text-[28px]">150+</p>
-              <p className="text-[11px] md:text-[14px] md:-mt-2">Happy Clients</p>
+              <p className="font-semibold text-[25px] md:text-[28px]">
+                150+
+              </p>
+              <p className="text-[11px] md:text-[14px] md:-mt-2">
+                Happy Clients
+              </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }} // Start fully transparent
@@ -94,53 +102,29 @@ const Hero = ({ setSelectedPage }) => {
               transition={{ duration: 3, delay: 1.2 }} // Smooth transition
               className=""
             >
-              <p className="font-semibold text-[25px] md:text-[28px]">30+</p>
-              <p className="text-[11px] md:text-[14px] md:-mt-2">Team Members</p>
+              <p className="font-semibold text-[25px] md:text-[28px]">
+                30+
+              </p>
+              <p className="text-[11px] md:text-[14px] md:-mt-2">
+                Team Members
+              </p>
             </motion.div>
           </div>
         </div>
 
-        {/* <div className="absolute  -z-50 right-0 clip-path-[polygon(25%_0%,100%_0%,75%_100%,0%_100%)]">
-          <img
-            width={700}
-            className="[clip-path:polygon(0%_30%,_5%_20%,_15%_10%,_25%_5%,_35%_5%,_45%_10%,_55%_20%,_65%_30%,_75%_40%,_85%_45%,_95%_45%,_100%_50%,_100%_100%,_0%_100%)] "
-            height={10}
-            src="/assets/backg.png"
-            alt=""
-          />
-        </div> */}
-
-        {/* <div className="w-64 h-64 relative">
-          <svg style="width:0;height:0;position:absolute;">
-            <defs>
-              <clipPath id="robotClip">
-                <path
-                  d="M0 35
-                 C 10 20, 20 10, 35 10
-                 S 50 20, 60 35
-                 L 60 50
-                 C 60 60, 50 70, 35 70
-                 S 10 60, 0 50
-                 Z"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-          <img
-            src="/assets/backg.png"
-            alt="Clipped Image"
-            className="absolute w-full h-full object-cover [clip-path:url(#robotClip)]"
-          />
-        </div> */}
         {/* IMAGE */}
-        <div className="">
+        <motion.div
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          className="md:absolute md:top-28 md:right-0 pt-5 lg:right-0 lg:top-0 lg:w-[800px] items-center"
+        >
           <img
-            className="object-cover"
-            width={1000}
-            src=""
+            src="/assets/heropic.png"
             alt="Hero Photo"
+            className="md:w-[500px] lg:w-[800px]"
           />
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

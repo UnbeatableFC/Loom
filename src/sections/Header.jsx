@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Link from "../shared/Link";
 import ActionButton from "../shared/ActionButton";
+import { motion } from "framer-motion";
 
 const Header = ({ selectedPage, setSelectedPage }) => {
   const flexBetween = "flex justify-between items-center";
@@ -102,7 +103,13 @@ const Header = ({ selectedPage, setSelectedPage }) => {
 
       {/* MOBILE */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[150px] md:w-[250px] bg-blue-300 drop-shadow-xl">
+        <motion.div
+          initial={{ x: "100%" }} // Start offscreen (right side)
+          animate={{ x: 0 }} // Slide into view
+          exit={{ x: "100%" }} // Slide back offscreen
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="fixed right-0 bottom-0 z-40 h-full w-[150px] md:w-[250px] bg-blue-300 drop-shadow-xl"
+        >
           <div className="flex justify-end p-12">
             <button
               title="Close-Icon"
@@ -118,7 +125,10 @@ const Header = ({ selectedPage, setSelectedPage }) => {
           </div>
 
           <div>
-            <div onClick={() => setIsMenuToggled(!isMenuToggled)} className={`${flexBetween} flex-col gap-10 text-xl`}>
+            <div
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+              className={`${flexBetween} flex-col gap-10 text-xl`}
+            >
               <Link
                 page="Home"
                 selectedPage={selectedPage}
@@ -154,7 +164,7 @@ const Header = ({ selectedPage, setSelectedPage }) => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

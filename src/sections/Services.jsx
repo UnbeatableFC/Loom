@@ -3,7 +3,7 @@ import ServiceCard from "../shared/ServiceCard";
 
 const Services = () => {
   return (
-    <section id="services" className="mt-48 mb-20 lg:mb-48 pb-20 px-10 lg:px-48 bg-[#F4F8FB]">
+    <section id="services" className="md:mt-28 mb-20 lg:mb-48 pb-20 px-10 lg:px-48 bg-[#F4F8FB]">
       <div className="flex items-center justify-center py-16">
         <h5 className="text-[33px] font-semibold">
           Our Intelligence{" "}
