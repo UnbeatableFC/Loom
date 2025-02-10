@@ -3,8 +3,8 @@ import TestimonialCard from "../shared/TestimonialCard";
 
 const Testimonials = () => {
   return (
-    <section className="mx-10 lg:mx-48 my-20 lg:my-40">
-      <h3 className="text-2xl font-semibold mb-16 text-center">
+    <section className="mx-5 md:mx-10 lg:mx-48 my-20 lg:my-40">
+      <h3 className="text-2xl font-semibold mb-8 md:mb-16 text-center">
         What Our{" "}
         <span className="text-[#20A5E6] drop-shadow-lg">
           Clients Say
