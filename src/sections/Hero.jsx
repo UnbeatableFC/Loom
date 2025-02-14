@@ -119,6 +119,20 @@ const Hero = ({ setSelectedPage }) => {
           transition={{ duration: 1.0, ease: "easeOut" }}
           className="md:absolute md:top-28 md:right-0 pt-5 lg:right-0 lg:top-0 lg:w-[800px] items-center"
         >
+          {/* star svg */}
+          <div className="w-24 absolute top-20 left-38 opacity-10">
+            <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
+          </div>
+          <div className="w-10 absolute top-33 left-32 opacity-15">
+            <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
+          </div>
+          <div className="w-24 absolute bottom-20 left-28 opacity-10">
+            <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
+          </div>
+          <div className="w-10 absolute bottom-20 left-24 opacity-15">
+            <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
+          </div>
+
           <img
             src="/assets/heropic.png"
             alt="Hero Photo"
