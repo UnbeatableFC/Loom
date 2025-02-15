@@ -27,7 +27,7 @@ const FAQ = () => {
           </p>
           <ActionButton>See More Questions</ActionButton>
         </div>
-        <div id="faq-accord" className="md:flex hidden flex-col gap-1 flex-2">
+        <div id="faq-accord" className="md:flex flex-col gap-1 flex-2">
           {FaqData.map(({ question, answer }, index) => (
             <FaqItem
               key={index}
