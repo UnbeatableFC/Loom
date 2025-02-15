@@ -10,9 +10,9 @@ const TestimonialCard = ({ name, photo, job, testimony, rating }) => {
           />
         </div>
         <div className="flex gap-1">
-          <div className="rounded-full ">
+          <div className="rounded-full">
             <img
-              className="w-12 h-12 aspect-square rounded-full object-cover"
+              className="w-12 h-12  aspect-square rounded-full object-cover"
               src={photo}
               alt={name}
             />

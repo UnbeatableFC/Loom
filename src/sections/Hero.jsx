@@ -120,16 +120,16 @@ const Hero = ({ setSelectedPage }) => {
           className="md:absolute md:top-28 md:right-0 pt-5 lg:right-0 lg:top-0 lg:w-[800px] items-center"
         >
           {/* star svg */}
-          <div className="w-24 absolute top-20 left-38 opacity-10">
+          <div className="w-24 hidden md:flex md:absolute md:left-20 md:top-0 lg:top-20 lg:left-38 opacity-15">
             <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
           </div>
-          <div className="w-10 absolute top-33 left-32 opacity-15">
+          <div className="w-10 hidden md:flex md:absolute md:top-11 md:left-19 lg:top-33 lg:left-32 opacity-15">
             <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
           </div>
-          <div className="w-24 absolute bottom-20 left-28 opacity-10">
+          <div className="w-24 hidden md:flex md:absolute md:bottom-0 md:right-10 lg:bottom-20 lg:left-28 opacity-15">
             <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
           </div>
-          <div className="w-10 absolute bottom-20 left-24 opacity-15">
+          <div className="w-10 hidden md:flex md:absolute md:bottom-0 md:right-22 lg:bottom-20 lg:left-24 opacity-20">
             <img src="/assets/star-2-svgrepo-com.svg" alt="star" />
           </div>
 
